@@ -1,9 +1,9 @@
-defmodule SocketGallows.Mixfile do
+defmodule HangmanApp.Mixfile do
   use Mix.Project
 
   def project do
     [
-      app: :socket_gallows,
+      app: :hangman_app,
       version: "0.0.1",
       elixir: "~> 1.4",
       elixirc_paths: elixirc_paths(Mix.env),
@@ -18,7 +18,6 @@ defmodule SocketGallows.Mixfile do
   # Type `mix help compile.app` for more information.
   def application do
     [
-      mod: {SocketGallows.Application, []},
       extra_applications: [:logger, :runtime_tools]
     ]
   end
@@ -42,7 +41,7 @@ defmodule SocketGallows.Mixfile do
       {:edeliver, "~> 1.4.3"},
       {:distillery, "~> 1.4"},
 
-      {:hangman, [path: "../hangman"]}
+      {:socket_gallows, [path: "./socket_gallows"]}
     ]
   end
 end
